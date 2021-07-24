@@ -81,4 +81,4 @@ chown bitnami.bitnami /home/bitnami/.bash_aliases /home/bitnami/.vimrc /home/bit
 #-------------
 # Remarks
 #-------------
-echo "\nReconfiguration finised at: $(date)" >> /home/bitnami/z_first_install.txt
+echo "Reconfiguration finised at: $(date)" >> /home/bitnami/z_first_install.txt

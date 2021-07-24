@@ -1,10 +1,12 @@
 # v.002 - For Debian based
-# NOT for any of Bitnami's instance
+# *NOT for any of Bitnami's instance
 
 # ----------------------
 # Set timezone to Asia/Jakarta
 # ----------------------
 `sudo timedatectl set-timezone Asia/Jakarta`
+
+echo "First install. Instance created at: $(date)\n" > /home/bitnami/z_first_install.txt
 
 # ----------------------
 # Update & upgrade Debian image fresh install on AWS
@@ -125,4 +127,4 @@ EOF
 #-------------
 # Remarks
 #-------------
-echo "First install.\nInstance created at: $(date)" > /home/admin/z_first_install.txt
+echo "Reconfiguration finised at: $(date)" >> /home/bitnami/z_first_install.txt
