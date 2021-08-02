@@ -6,7 +6,7 @@
 # ----------------------
 `sudo timedatectl set-timezone Asia/Jakarta`
 
-echo "First install. Instance created at: $(date)\n" > /home/bitnami/z_first_install.txt
+echo "First install. Instance created at: $(date)\n" > /home/admin/z_first_install.txt
 
 # ----------------------
 # Update & upgrade Debian image fresh install on AWS
@@ -127,4 +127,4 @@ EOF
 #-------------
 # Remarks
 #-------------
-echo "Reconfiguration finised at: $(date)" >> /home/bitnami/z_first_install.txt
+echo "Reconfiguration finised at: $(date)" >> /home/admin/z_first_install.txt
