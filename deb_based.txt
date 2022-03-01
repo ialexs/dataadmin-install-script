@@ -23,7 +23,7 @@ sudo apt install dnsutils figlet htop jq mc multitail nmap rsync tmux tmux-plugi
 # ..or your terminal will act like a bytch
 # ---------------------
 echo -e "\nexport TERM=xterm-256color" >> /home/admin/.bashrc
-echo -e "en_US.UTF-8 UTF-8" >> /etc/locale.gen ; locale-gen
+echo -e "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen ; sudo locale-gen
 
 # ----------------------
 # -- dockering start ---

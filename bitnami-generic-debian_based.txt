@@ -20,7 +20,7 @@ sudo apt install dnsutils figlet htop jq mc multitail nmap rsync tmux tmux-plugi
 # ---------------------
 
 echo "export TERM=xterm-256color" >> /home/bitnami/.bashrc
-echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen ; locale-gen
+echo "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen ; sudo locale-gen
 
 # -----------------
 # Adding .tmux.conf
