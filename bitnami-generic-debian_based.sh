@@ -1,4 +1,3 @@
-# For any Bitnami with Debian based instance
 # /ialexs - 12 May 2021
 
 # ----------------------------

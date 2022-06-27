@@ -25,31 +25,6 @@ sudo apt install dnsutils figlet htop jq mc multitail nmap rsync tmux tmux-plugi
 echo -e "\nexport TERM=xterm-256color" >> /home/admin/.bashrc
 echo -e "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen ; sudo locale-gen
 
-# ----------------------
-# -- dockering start ---
-# ----------------------
-
-# Dockering? Install Docker. If no, just keep these closed.
-# ----------------------
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-sudo apt-get update -y
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-
-# Install Docker Compose
-# ----------------------
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
-# Add the default user 'admin' to 'docker' group
-# ----------------------
-sudo usermod -aG docker admin
-
-# ---------------------
-# -- dockering end ----
-# ---------------------
-
 # ---------------------
 # Additional personal reference aliases
 # ---------------------
@@ -116,17 +91,7 @@ colorscheme elflord             "my eyes
 EOF
 
 
-# -------------
-# Need caddy? (for reverse proxy with SSL)
-# -- Update: NO, wee use caddy by docker-compose. Not by OS install.
-# -------------
-# sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
-# curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/cfg/gpg/gpg.155B6D79CA56EA34.key' | sudo apt-key add -
-# curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/cfg/setup/config.deb.txt?distro=debian&version=any-version' | sudo tee -a /etc/apt/sources.list.d/caddy-stable.list
-# sudo apt update
-# sudo apt install caddy
-
 #-------------
 # Remarks
 #-------------
-echo "Reconfiguration finised at: $(date)" >> /home/admin/z_first_install.txt
+echo "Reconfiguration finished at: $(date)" >> /home/admin/z_first_install.txt
