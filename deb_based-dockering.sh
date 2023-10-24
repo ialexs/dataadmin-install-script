@@ -101,8 +101,6 @@ sudo systemctl enable containerd.service
 
 # Need caddy? (for reverse proxy with SSL)
 # -- Update: NO, we use install Caddy by docker-compose. Not by OS install.
-#
-#-------------
+
 # Remarks
-#-------------
 echo "Reconfiguration finised at: $(date)" >>/home/admin/z_first_install.txt
