@@ -73,7 +73,7 @@ EOF
 # ---------------------
 # Additional personal reference aliases
 # ---------------------
-wget https://nrd.id/bash_profile -O /home/bitnami/.bash_aliases
+wget https://nrd.id/aliases -O /home/bitnami/.bash_aliases
 
 chown bitnami.bitnami /home/bitnami/.bash_aliases /home/bitnami/.vimrc /home/bitnami/.tmux.conf
 
